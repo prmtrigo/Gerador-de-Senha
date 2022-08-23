@@ -1,4 +1,4 @@
-//variáveis
+//variables
 let sliderElement = document.querySelector('#slider');
 let buttonElement = document.querySelector('#button');
 
@@ -12,11 +12,17 @@ let novaSenha = "";
 
 sizePassword.innerHTML = sliderElement.value
 
-//gerar o visor para tamanho de caracteres
+//show password length
 sliderElement.oninput = function(){
     sizePassword.innerHTML = this.value;
 }
 
+//generate password
 function generatePassword(){
-    alert("kung fu cê conhece whatsapp?");
+    
+    let pass = "";
+    //generate password from password length
+    for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
+        pass += charset.charAt(Math.floor(math.random()*n));
+    }
 }

@@ -96,9 +96,27 @@ body{
     font-size: 16px;
     border: 6px;
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.hide{
+    display: none;
 }
 
 .container-password:hover .tooltip{
     visibility: visible;
-    
+    bottom: 50px;
+    opacity: 1;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 3px 3px 3px #00AA00;
+    border: 1px solid #83E584;
+    height: 18px;
+    width: 18px;
+    border-radius: 18px;
+    background: #439643;
+    cursor: pointer;
+    -webkit-appearance: none;
 }

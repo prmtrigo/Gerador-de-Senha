@@ -10,7 +10,7 @@ let containerPassword = document.querySelector("container-input");
 let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@$%&<>"
 let novaSenha = "";
 
-sizePassword.innerHTML = sliderElement.value
+sizePassword.innerHTML = sliderElement.value;
 
 //show password length
 sliderElement.oninput = function(){
@@ -23,6 +23,15 @@ function generatePassword(){
     let pass = "";
     //generate password from password length
     for(let i = 0, n = charset.length; i < sliderElement.value; ++i){
-        pass += charset.charAt(Math.floor(math.random()*n));
+        pass += charset.charAt(Math.floor(Math.random()*n));
     }
+    //removing class "hide"
+    containerPassword.classList.remove("hide");
+    console.log(pass);
+}
+
+//copying the password
+function copyPassword(){
+    alert("Senha copiada com sucesso!");
+    navigator.clipboard.writeText(novaSenha);
 }

@@ -1,0 +1,31 @@
+@media screen and (max-width: 760px){
+    body{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo{
+        flex-direction: column;
+        width: 80%;
+        padding-top: 10rem;
+    }
+
+    .container-input{
+        width: 80%
+    }
+
+    .container-password{
+        margin-top: -0.5rem;;
+        width: 60%;
+        font-size: 0.8rem;
+    }
+
+    .title{
+        font-size: 1rem;
+    }
+
+    .tooltip{
+        margin-top: -1rem;
+        font-size: 0.8rem;
+    }
+}
